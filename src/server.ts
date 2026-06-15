@@ -70,10 +70,17 @@ export function getCookie(request: Request, name: string): string | undefined {
   if (!request?.headers) return undefined;
   const cookieHeader = request.headers.get("cookie");
   if (!cookieHeader) return undefined;
+  
   const cookies = cookieHeader.split(";");
   for (const cookie of cookies) {
-    const [key, value] = cookie.split("=").map((c) => c.trim());
-    if (key === name) return value;
+    const parts = cookie.split("=");
+    if (parts.length < 2) continue;
+    
+    const key = parts[0].trim();
+    if (key === name) {
+      // Re-join the rest of the parts in case the value contains '='
+      return parts.slice(1).join("=").trim();
+    }
   }
   return undefined;
 }

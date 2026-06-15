@@ -10,17 +10,11 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { getCookie } from "../server";
 
 export const Route = createFileRoute("/login")({
-  beforeLoad: async ({ request }: any) => {
-    let sessionToken: string | undefined;
+  beforeLoad: async () => {
+    if (typeof window === "undefined") return;
 
-    if (typeof window !== "undefined") {
-      const { data } = await supabase.auth.getSession();
-      sessionToken = data.session?.access_token;
-    } else {
-      sessionToken = getCookie(request, "sb-auth-token");
-    }
-
-    if (sessionToken) throw redirect({ to: "/" });
+    const { data } = await supabase.auth.getSession();
+    if (data.session) throw redirect({ to: "/" });
   },
   component: LoginPage,
 });

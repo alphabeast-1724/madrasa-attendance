@@ -4,30 +4,44 @@ import { supabase } from "@/integrations/supabase/client";
 import { QK } from "@/lib/queryKeys";
 import type { Session } from "@supabase/supabase-js";
 
+const syncCookieToSession = (session: Session | null) => {
+  if (typeof document === "undefined") return;
+
+  if (session) {
+    const isSecure = window.location.protocol === "https:";
+    // Use max-age (seconds) for more reliable persistence
+    const maxAge = session.expires_in;
+    document.cookie = `sb-auth-token=${session.access_token}; path=/; max-age=${maxAge}; SameSite=Lax${isSecure ? "; Secure" : ""}`;
+  } else {
+    // Clear cookie
+    document.cookie = "sb-auth-token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT; SameSite=Lax";
+  }
+};
+
 export function useSession() {
   const qc = useQueryClient();
 
   useEffect(() => {
+    // 1. Immediate sync on mount
+    const init = async () => {
+      const { data: { session } } = await supabase.auth.getSession();
+      syncCookieToSession(session);
+    };
+    init();
+
+    // 2. Listen for changes
     const {
       data: { subscription },
     } = supabase.auth.onAuthStateChange((_event, session) => {
       qc.setQueryData(QK.session(), session);
+      syncCookieToSession(session);
 
-      // Sync session to cookie for SSR
-      if (typeof document !== "undefined") {
-        if (session) {
-          const expires = new Date(session.expires_at! * 1000).toUTCString();
-          document.cookie = `sb-auth-token=${session.access_token}; path=/; expires=${expires}; SameSite=Lax; Secure`;
-        } else {
-          document.cookie = "sb-auth-token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT";
-        }
+      if (_event === "SIGNED_IN" || _event === "SIGNED_OUT") {
+        qc.invalidateQueries({ queryKey: ["auth"] });
+        qc.invalidateQueries({ queryKey: ["admin"] });
+        qc.invalidateQueries({ queryKey: ["students"] });
+        qc.invalidateQueries({ queryKey: ["logs"] });
       }
-
-      // Invalidate user-scoped caches on sign-in/out/refresh
-      qc.invalidateQueries({ queryKey: ["auth"] });
-      qc.invalidateQueries({ queryKey: ["admin"] });
-      qc.invalidateQueries({ queryKey: ["students"] });
-      qc.invalidateQueries({ queryKey: ["logs"] });
     });
     return () => subscription.unsubscribe();
   }, [qc]);
@@ -38,7 +52,8 @@ export function useSession() {
       const { data } = await supabase.auth.getSession();
       return data.session ?? null;
     },
-    staleTime: Infinity,
+    staleTime: 1000 * 60 * 5,
+    refetchOnWindowFocus: false,
   });
 }
 

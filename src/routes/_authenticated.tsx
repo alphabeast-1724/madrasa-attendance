@@ -13,17 +13,13 @@ import { getCookie } from "../server";
 import { APP_CONFIG } from "@/lib/config";
 
 export const Route = createFileRoute("/_authenticated")({
-  beforeLoad: async ({ request }: any) => {
-    let sessionToken: string | undefined;
+  beforeLoad: async () => {
+    // Only run auth checks on the client.
+    // This allows hash routing to work and Supabase to restore from localStorage.
+    if (typeof window === "undefined") return;
 
-    if (typeof window !== "undefined") {
-      const { data } = await supabase.auth.getSession();
-      sessionToken = data.session?.access_token;
-    } else {
-      sessionToken = getCookie(request, "sb-auth-token");
-    }
-
-    if (!sessionToken) throw redirect({ to: "/login" });
+    const { data } = await supabase.auth.getSession();
+    if (!data.session) throw redirect({ to: "/login" });
   },
   component: AuthenticatedShell,
 });

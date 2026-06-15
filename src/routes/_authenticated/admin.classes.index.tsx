@@ -26,18 +26,86 @@ export const Route = createFileRoute("/_authenticated/admin/classes/")({
   component: ClassesPage,
 });
 
+function ClassCard({ 
+  classItem, 
+  staff, 
+  studentCount,
+  onDelete 
+}: { 
+  classItem: any, 
+  staff: any[], 
+  studentCount: number,
+  onDelete: (id: string, name: string) => void 
+}) {
+  const teacherName = staff?.find((s) => s.id === classItem.teacher_id)?.full_name ?? "—";
+
+  return (
+    <Card>
+      <CardHeader className="pb-2">
+        <CardTitle className="text-base flex items-center justify-between">
+          <span>{classItem.class_name}</span>
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={() => onDelete(classItem.id, classItem.class_name)}
+          >
+            <Trash2 className="size-4 text-destructive" />
+          </Button>
+        </CardTitle>
+      </CardHeader>
+      <CardContent className="text-sm text-muted-foreground space-y-1">
+        <p>
+          Teacher:{" "}
+          <span className="text-foreground font-medium">
+            {teacherName}
+          </span>
+        </p>
+        {classItem.batch && (
+          <p>
+            Batch:{" "}
+            <span className="text-foreground font-medium">
+              {classItem.batch}
+            </span>
+          </p>
+        )}
+        <p>
+          Students:{" "}
+          <span className="text-foreground font-medium">
+            {studentCount}
+          </span>
+        </p>
+        <Button asChild variant="outline" size="sm" className="mt-2">
+          <Link
+            to="/admin/classes/$classId"
+            params={{ classId: classItem.id }}
+          >
+            Open <ChevronRight className="size-4 ml-1" />
+          </Link>
+        </Button>
+      </CardContent>
+    </Card>
+  );
+}
+
 function ClassesPage() {
-  const { data: classes, isLoading } = useAllClasses();
+  const { data: classes, isLoading: classesLoading } = useAllClasses();
   const { data: staff } = useStaffList();
-  const { data: classCounts } = useClassStudentCounts();
+  const { data: counts, isLoading: countsLoading } = useClassStudentCounts();
   const create = useCreateClass();
   const del = useDeleteClass();
   const [open, setOpen] = useState(false);
   const [name, setName] = useState("");
 
-  const countByClass = (id: string) => classCounts?.[id] ?? 0;
-  const teacherName = (tid?: string | null) =>
-    staff?.find((s) => s.id === tid)?.full_name ?? "—";
+  const isLoading = classesLoading || countsLoading;
+
+  const handleDelete = (id: string, className: string) => {
+    if (confirm(`Delete "${className}"? This will fail if students exist.`)) {
+      del.mutate(id, {
+        onSuccess: () => toast.success("Class deleted"),
+        onError: (e) => toast.error(e instanceof Error ? e.message : "Failed"),
+      });
+    }
+  };
 
   return (
     <div className="space-y-3">
@@ -103,64 +171,13 @@ function ClassesPage() {
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           {classes?.map((c) => (
-            <Card key={c.id}>
-              <CardHeader className="pb-2">
-                <CardTitle className="text-base flex items-center justify-between">
-                  <span>{c.class_name}</span>
-                  <Button
-                    variant="ghost"
-                    size="icon"
-                    onClick={() => {
-                      if (
-                        confirm(
-                          `Delete "${c.class_name}"? This will fail if students exist.`
-                        )
-                      ) {
-                        del.mutate(c.id, {
-                          onSuccess: () => toast.success("Class deleted"),
-                          onError: (e) =>
-                            toast.error(
-                              e instanceof Error ? e.message : "Failed"
-                            ),
-                        });
-                      }
-                    }}
-                  >
-                    <Trash2 className="size-4 text-destructive" />
-                  </Button>
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="text-sm text-muted-foreground space-y-1">
-                <p>
-                  Teacher:{" "}
-                  <span className="text-foreground font-medium">
-                    {teacherName(c.teacher_id)}
-                  </span>
-                </p>
-                {c.batch && (
-                  <p>
-                    Batch:{" "}
-                    <span className="text-foreground font-medium">
-                      {c.batch}
-                    </span>
-                  </p>
-                )}
-                <p>
-                  Students:{" "}
-                  <span className="text-foreground font-medium">
-                    {countByClass(c.id)}
-                  </span>
-                </p>
-                <Button asChild variant="outline" size="sm" className="mt-2">
-                  <Link
-                    to="/admin/classes/$classId"
-                    params={{ classId: c.id }}
-                  >
-                    Open <ChevronRight className="size-4 ml-1" />
-                  </Link>
-                </Button>
-              </CardContent>
-            </Card>
+            <ClassCard 
+              key={c.id} 
+              classItem={c} 
+              staff={staff || []} 
+              studentCount={counts?.[c.id] || 0}
+              onDelete={handleDelete} 
+            />
           ))}
         </div>
       )}
