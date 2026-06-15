@@ -1,0 +1,1155 @@
+:8080/favicon.ico:1  Failed to load resource: the server responded with a status of 500 ()
+alpha@alphas-empire:/media/alpha/New Volume/Downloads/ledger fix/attendance-main (copy)$ npm install
+npm warn deprecated whatwg-encoding@3.1.1: Use @exodus/bytes instead for a more spec-conformant and faster implementation
+npm warn deprecated source-map@0.8.0-beta.0: The work that was done in this beta branch won't be included in future versions
+npm warn deprecated glob@11.1.0: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+
+added 939 packages, and audited 940 packages in 25s
+
+223 packages are looking for funding
+  run `npm fund` for details
+
+16 vulnerabilities (6 low, 2 moderate, 8 high)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+alpha@alphas-empire:/media/alpha/New Volume/Downloads/ledger fix/attendance-main (copy)$ npm run dev
+
+> dev
+> vite dev
+
+Error: Error transforming route file /media/alpha/New Volume/Downloads/ledger fix/attendance-main (copy)/src/routes/_authenticated/admin.classes.$classId.tsx: SyntaxError: Expected corresponding JSX closing tag for <div>. (318:10)
+    at file:///media/alpha/New%20Volume/Downloads/ledger%20fix/attendance-main%20(copy)/node_modules/@tanstack/router-generator/dist/esm/generator.js:143:13
+    at async generate (file:///media/alpha/New%20Volume/Downloads/ledger%20fix/attendance-main%20(copy)/node_modules/@tanstack/router-plugin/dist/esm/core/router-generator-plugin.js:39:4)
+    at async BasicMinimalPluginContext.configResolved (file:///media/alpha/New%20Volume/Downloads/ledger%20fix/attendance-main%20(copy)/node_modules/@tanstack/router-plugin/dist/esm/core/router-generator-plugin.js:56:4)
+    at async Promise.all (index 5)
+    at async resolveConfig (file:///media/alpha/New%20Volume/Downloads/ledger%20fix/attendance-main%20(copy)/node_modules/vite/dist/node/chunks/config.js:35702:2)
+    at async _createServer (file:///media/alpha/New%20Volume/Downloads/ledger%20fix/attendance-main%20(copy)/node_modules/vite/dist/node/chunks/config.js:25381:67)
+    at async CAC.<anonymous> (file:///media/alpha/New%20Volume/Downloads/ledger%20fix/attendance-main%20(copy)/node_modules/vite/dist/node/cli.js:572:18)
+
+  VITE v7.3.3  ready in 12111 ms
+
+  ➜  Local:   http://localhost:8080/
+  ➜  Network: http://192.168.1.11:8080/
+  ➜  press h + enter to show help
+(!) Failed to run dependency scan. Skipping dependency pre-bundling. Error:   Failed to scan for dependencies from entries:
+  /media/alpha/New Volume/Downloads/ledger fix/attendance-main (copy)/src/client.tsx
+/media/alpha/New Volume/Downloads/ledger fix/attendance-main (copy)/src/router.tsx
+
+  ✘ [ERROR] Unexpected closing "CardTitle" tag does not match opening "div" tag
+
+    src/routes/_authenticated/admin.classes.$classId.tsx:318:12:
+      318 │           </CardTitle>
+          │             ~~~~~~~~~
+          ╵             div
+
+  The opening "div" tag is here:
+
+    src/routes/_authenticated/admin.classes.$classId.tsx:219:13:
+      219 │             <div className="flex flex-1 items-center gap-2 max-w-...
+          ╵              ~~~
+
+
+✘ [ERROR] Unexpected closing "CardHeader" tag does not match opening "CardTitle" tag
+
+    src/routes/_authenticated/admin.classes.$classId.tsx:319:10:
+      319 │         </CardHeader>
+          │           ~~~~~~~~~~
+          ╵           CardTitle
+
+  The opening "CardTitle" tag is here:
+
+    src/routes/_authenticated/admin.classes.$classId.tsx:213:11:
+      213 │           <CardTitle className="text-base flex flex-col sm:flex-r...
+          ╵            ~~~~~~~~~
+
+
+✘ [ERROR] Unexpected closing "Card" tag does not match opening "CardHeader" tag
+
+    src/routes/_authenticated/admin.classes.$classId.tsx:396:8:
+      396 │       </Card>
+          │         ~~~~
+          ╵         CardHeader
+
+  The opening "CardHeader" tag is here:
+
+    src/routes/_authenticated/admin.classes.$classId.tsx:212:9:
+      212 │         <CardHeader className="pb-3">
+          ╵          ~~~~~~~~~~
+
+
+✘ [ERROR] Unexpected closing "div" tag does not match opening "Card" tag
+
+    src/routes/_authenticated/admin.classes.$classId.tsx:397:6:
+      397 │     </div>
+          │       ~~~
+          ╵       Card
+
+  The opening "Card" tag is here:
+
+    src/routes/_authenticated/admin.classes.$classId.tsx:211:7:
+      211 │       <Card>
+          ╵        ~~~~
+
+
+✘ [ERROR] The character "}" is not valid inside a JSX element
+
+    src/routes/_authenticated/admin.classes.$classId.tsx:399:0:
+      399 │ }
+          │ ^
+          ╵ {'}'}
+
+  Did you mean to escape it as "{'}'}" instead?
+
+
+✘ [ERROR] Unexpected end of file before a closing "div" tag
+
+    src/routes/_authenticated/admin.classes.$classId.tsx:400:0:
+      400 │ 
+          │ ^
+          ╵ </div>
+
+  The opening "div" tag is here:
+
+    src/routes/_authenticated/admin.classes.$classId.tsx:139:5:
+      139 │     <div className="space-y-4">
+          ╵      ~~~
+
+
+    at failureErrorWithLog (/media/alpha/New Volume/Downloads/ledger fix/attendance-main (copy)/node_modules/vite/node_modules/esbuild/lib/main.js:1748:15)
+    at /media/alpha/New Volume/Downloads/ledger fix/attendance-main (copy)/node_modules/vite/node_modules/esbuild/lib/main.js:1207:25
+    at runOnEndCallbacks (/media/alpha/New Volume/Downloads/ledger fix/attendance-main (copy)/node_modules/vite/node_modules/esbuild/lib/main.js:1588:45)
+    at buildResponseToResult (/media/alpha/New Volume/Downloads/ledger fix/attendance-main (copy)/node_modules/vite/node_modules/esbuild/lib/main.js:1205:7)
+    at /media/alpha/New Volume/Downloads/ledger fix/attendance-main (copy)/node_modules/vite/node_modules/esbuild/lib/main.js:1217:9
+    at new Promise (<anonymous>)
+    at requestCallbacks.on-end (/media/alpha/New Volume/Downloads/ledger fix/attendance-main (copy)/node_modules/vite/node_modules/esbuild/lib/main.js:1216:54)
+    at handleRequest (/media/alpha/New Volume/Downloads/ledger fix/attendance-main (copy)/node_modules/vite/node_modules/esbuild/lib/main.js:909:17)
+    at handleIncomingPacket (/media/alpha/New Volume/Downloads/ledger fix/attendance-main (copy)/node_modules/vite/node_modules/esbuild/lib/main.js:934:7)
+    at Socket.readFromStdout (/media/alpha/New Volume/Downloads/ledger fix/attendance-main (copy)/node_modules/vite/node_modules/esbuild/lib/main.js:862:7)
+[vite] connected.
+Error: Transform failed with 6 errors:
+/media/alpha/New Volume/Downloads/ledger fix/attendance-main (copy)/src/routes/_authenticated/admin.classes.$classId.tsx:318:12: ERROR: Unexpected closing "CardTitle" tag does not match opening "div" tag
+/media/alpha/New Volume/Downloads/ledger fix/attendance-main (copy)/src/routes/_authenticated/admin.classes.$classId.tsx:319:10: ERROR: Unexpected closing "CardHeader" tag does not match opening "CardTitle" tag
+/media/alpha/New Volume/Downloads/ledger fix/attendance-main (copy)/src/routes/_authenticated/admin.classes.$classId.tsx:396:8: ERROR: Unexpected closing "Card" tag does not match opening "CardHeader" tag
+/media/alpha/New Volume/Downloads/ledger fix/attendance-main (copy)/src/routes/_authenticated/admin.classes.$classId.tsx:397:6: ERROR: Unexpected closing "div" tag does not match opening "Card" tag
+/media/alpha/New Volume/Downloads/ledger fix/attendance-main (copy)/src/routes/_authenticated/admin.classes.$classId.tsx:399:0: ERROR: The character "}" is not valid inside a JSX element
+...
+    at failureErrorWithLog (/media/alpha/New Volume/Downloads/ledger fix/attendance-main (copy)/node_modules/vite/node_modules/esbuild/lib/main.js:1748:15)
+    ... 8 lines matching cause stack trace ...
+    at Pipe.onStreamRead (node:internal/stream_base_commons:189:23) {
+  cause: Error: Transform failed with 6 errors:
+  /media/alpha/New Volume/Downloads/ledger fix/attendance-main (copy)/src/routes/_authenticated/admin.classes.$classId.tsx:318:12: ERROR: Unexpected closing "CardTitle" tag does not match opening "div" tag
+  /media/alpha/New Volume/Downloads/ledger fix/attendance-main (copy)/src/routes/_authenticated/admin.classes.$classId.tsx:319:10: ERROR: Unexpected closing "CardHeader" tag does not match opening "CardTitle" tag
+  /media/alpha/New Volume/Downloads/ledger fix/attendance-main (copy)/src/routes/_authenticated/admin.classes.$classId.tsx:396:8: ERROR: Unexpected closing "Card" tag does not match opening "CardHeader" tag
+  /media/alpha/New Volume/Downloads/ledger fix/attendance-main (copy)/src/routes/_authenticated/admin.classes.$classId.tsx:397:6: ERROR: Unexpected closing "div" tag does not match opening "Card" tag
+  /media/alpha/New Volume/Downloads/ledger fix/attendance-main (copy)/src/routes/_authenticated/admin.classes.$classId.tsx:399:0: ERROR: The character "}" is not valid inside a JSX element
+  ...
+      at failureErrorWithLog (/media/alpha/New Volume/Downloads/ledger fix/attendance-main (copy)/node_modules/vite/node_modules/esbuild/lib/main.js:1748:15)
+      at /media/alpha/New Volume/Downloads/ledger fix/attendance-main (copy)/node_modules/vite/node_modules/esbuild/lib/main.js:1017:50
+      at responseCallbacks.<computed> (/media/alpha/New Volume/Downloads/ledger fix/attendance-main (copy)/node_modules/vite/node_modules/esbuild/lib/main.js:884:9)
+      at handleIncomingPacket (/media/alpha/New Volume/Downloads/ledger fix/attendance-main (copy)/node_modules/vite/node_modules/esbuild/lib/main.js:939:12)
+      at Socket.readFromStdout (/media/alpha/New Volume/Downloads/ledger fix/attendance-main (copy)/node_modules/vite/node_modules/esbuild/lib/main.js:862:7)
+      at Socket.emit (node:events:509:28)
+      at addChunk (node:internal/streams/readable:563:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:514:3)
+      at Readable.push (node:internal/streams/readable:394:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23) {
+    errors: [ [Object], [Object], [Object], [Object], [Object], [Object] ],
+    warnings: [],
+    frame: '\n' +
+      '\x1B[33mUnexpected closing "CardTitle" tag does not match opening "div" tag\x1B[39m\n' +
+      '316 |                </Dialog>\n' +
+      '317 |              </div>\n' +
+      '318 |            </CardTitle>\n' +
+      '    |              ^\n' +
+      '319 |          </CardHeader>\n' +
+      '320 |          <CardContent>\n' +
+      '\n' +
+      '\x1B[33mUnexpected closing "CardHeader" tag does not match opening "CardTitle" tag\x1B[39m\n' +
+      '317 |              </div>\n' +
+      '318 |            </CardTitle>\n' +
+      '319 |          </CardHeader>\n' +
+      '    |            ^\n' +
+      '320 |          <CardContent>\n' +
+      '321 |            <p className="text-xs text-muted-foreground mb-2">\n' +
+      '\n' +
+      '\x1B[33mUnexpected closing "Card" tag does not match opening "CardHeader" tag\x1B[39m\n' +
+      '394 |            </div>\n' +
+      '395 |          )}\n' +
+      '396 |        </Card>\n' +
+      '    |          ^\n' +
+      '397 |      </div>\n' +
+      '398 |    );\n' +
+      '\n' +
+      '\x1B[33mUnexpected closing "div" tag does not match opening "Card" tag\x1B[39m\n' +
+      '395 |          )}\n' +
+      '396 |        </Card>\n' +
+      '397 |      </div>\n' +
+      '    |        ^\n' +
+      '398 |    );\n' +
+      '399 |  }\n' +
+      '\n' +
+      '\x1B[33mThe character "}" is not valid inside a JSX element\x1B[39m\n' +
+      '397 |      </div>\n' +
+      '398 |    );\n' +
+      '399 |  }\n' +
+      '    |  ^\n' +
+      '400 |  \n' +
+      '\n' +
+      '\x1B[33mUnexpected end of file before a closing "div" tag\x1B[39m\n' +
+      '398 |    );\n' +
+      '399 |  }\n' +
+      '400 |  \n' +
+      '    |  ^\n',
+    loc: {
+      column: 12,
+      file: '/media/alpha/New Volume/Downloads/ledger fix/attendance-main (copy)/src/routes/_authenticated/admin.classes.$classId.tsx',
+      length: 9,
+      line: 318,
+      lineText: '          </CardTitle>',
+      namespace: '',
+      suggestion: 'div'
+    },
+    plugin: 'vite:esbuild',
+    id: '/media/alpha/New Volume/Downloads/ledger fix/attendance-main (copy)/src/routes/_authenticated/admin.classes.$classId.tsx',
+    pluginCode: 'import { createFileRoute, Link } from "@tanstack/react-router";\n' +
+      'import { useRef, useState, useEffect } from "react";\n' +
+      'import Papa from "papaparse";\n' +
+      'import {\n' +
+      '  useClassDetail,\n' +
+      '  useUpdateClass,\n' +
+      '  useStaffList,\n' +
+      '  useBulkImportStudents,\n' +
+      '  useAddStudent,\n' +
+      '  useDeleteStudent,\n' +
+      '  usePaginatedStudents,\n' +
+      '} from "@/hooks/useAdminData";\n' +
+      'import {\n' +
+      '  bulkStudentImportSchema,\n' +
+      '  studentFormSchema,\n' +
+      '} from "@/lib/schemas";\n' +
+      'import { APP_CONFIG } from "@/lib/config";\n' +
+      'import { Button } from "@/components/ui/button";\n' +
+      'import { Input } from "@/components/ui/input";\n' +
+      'import { Label } from "@/components/ui/label";\n' +
+      'import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";\n' +
+      'import {\n' +
+      '  Select,\n' +
+      '  SelectContent,\n' +
+      '  SelectItem,\n' +
+      '  SelectTrigger,\n' +
+      '  SelectValue,\n' +
+      '} from "@/components/ui/select";\n' +
+      'import {\n' +
+      '  Dialog,\n' +
+      '  DialogContent,\n' +
+      '  DialogFooter,\n' +
+      '  DialogHeader,\n' +
+      '  DialogTitle,\n' +
+      '  DialogTrigger,\n' +
+      '} from "@/components/ui/dialog";\n' +
+      'import { ArrowLeft, Upload, UserPlus, Trash2, Search, ChevronLeft, ChevronRight, FileText } from "lucide-react";\n' +
+      'import { toast } from "sonner";\n' +
+      '\n' +
+      'export const Route = createFileRoute(\n' +
+      '  "/_authenticated/admin/classes/$classId"\n' +
+      ')({\n' +
+      '  component: ClassDetailPage,\n' +
+      '});\n' +
+      '\n' +
+      'function ClassDetailPage() {\n' +
+      '  const { classId } = Route.useParams();\n' +
+      '  const { data: classInfo, isLoading } = useClassDetail(classId);\n' +
+      '  const { data: staff } = useStaffList();\n' +
+      '  \n' +
+      '  const [page, setPage] = useState(0);\n' +
+      '  const [search, setSearch] = useState("");\n' +
+      '  const [debouncedSearch, setDebouncedSearch] = useState("");\n' +
+      '\n' +
+      '  useEffect(() => {\n' +
+      '    const timer = setTimeout(() => {\n' +
+      '      setDebouncedSearch(search);\n' +
+      '      setPage(0); // Reset on search\n' +
+      '    }, 500);\n' +
+      '    return () => clearTimeout(timer);\n' +
+      '  }, [search]);\n' +
+      '\n' +
+      '  const { data: rosterData, isLoading: rosterLoading } = usePaginatedStudents(classId, page, debouncedSearch);\n' +
+      '  const roster = rosterData?.data ?? [];\n' +
+      '  const totalCount = rosterData?.count ?? 0;\n' +
+      '  const totalPages = Math.ceil(totalCount / APP_CONFIG.pageSize);\n' +
+      '\n' +
+      '  const updateClass = useUpdateClass();\n' +
+      '  const importMut = useBulkImportStudents(classId);\n' +
+      '  const addOne = useAddStudent(classId);\n' +
+      '  const deleteOne = useDeleteStudent(classId);\n' +
+      '  const fileRef = useRef<HTMLInputElement>(null);\n' +
+      '  const [addOpen, setAddOpen] = useState(false);\n' +
+      '  const [form, setForm] = useState({ reg_no: "", name: "", father_name: "" });\n' +
+      '\n' +
+      '  const onFile = (e: React.ChangeEvent<HTMLInputElement>) => {\n' +
+      '    const file = e.target.files?.[0];\n' +
+      '    if (!file) return;\n' +
+      '    Papa.parse(file, {\n' +
+      '      header: true,\n' +
+      '      skipEmptyLines: true,\n' +
+      '      complete: (res) => {\n' +
+      '        try {\n' +
+      '          // Normalize and map keys to schema expected fields\n' +
+      '          const normalized = (res.data as any[]).map((row) => {\n' +
+      '            const obj: any = {};\n' +
+      '            for (const key in row) {\n' +
+      '              const k = key.toLowerCase().trim();\n' +
+      '              let target = k.replace(/[\\s-]+/g, "_");\n' +
+      '              \n' +
+      '              // Map common synonyms\n' +
+      '              if (k.includes("reg") || k.includes("id") || k.includes("number")) target = "reg_no";\n' +
+      '              if (k.includes("student") || k.includes("full name")) target = "name";\n' +
+      '              if (k.includes("father") || k.includes("parent")) target = "father_name";\n' +
+      '              \n' +
+      '              obj[target] = row[key];\n' +
+      '            }\n' +
+      '            return obj;\n' +
+      '          });\n' +
+      '\n' +
+      '          const parsed = bulkStudentImportSchema.safeParse(normalized);\n' +
+      '          if (!parsed.success) {\n' +
+      '            const issues = parsed.error.issues.map(i => `${i.path.join(\'.\')}: ${i.message}`).join(", ");\n' +
+      '            toast.error(`CSV Validation Error: ${issues.slice(0, 100)}...`);\n' +
+      '            return;\n' +
+      '          }\n' +
+      '\n' +
+      '          importMut.mutate(parsed.data, {\n' +
+      '            onSuccess: (d) =>\n' +
+      '              toast.success(`Imported ${d?.length ?? 0} students`),\n' +
+      '            onError: (err) =>\n' +
+      '              toast.error(err instanceof Error ? err.message : "Import failed"),\n' +
+      '          });\n' +
+      '        } catch (err: unknown) {\n' +
+      '          toast.error("An unexpected error occurred during import");\n' +
+      '          console.error(err);\n' +
+      '        } finally {\n' +
+      '          if (fileRef.current) fileRef.current.value = "";\n' +
+      '        }\n' +
+      '      },\n' +
+      '      error: (err) => toast.error(err.message),\n' +
+      '    });\n' +
+      '  };\n' +
+      '\n' +
+      '  if (isLoading) return <p className="text-sm text-muted-foreground">Loading…</p>;\n' +
+      '  if (!classInfo)\n' +
+      '    return (\n' +
+      '      <Card>\n' +
+      '        <CardContent className="p-6 text-center">\n' +
+      '          Class not found.{" "}\n' +
+      '          <Link to="/admin/classes" className="underline">\n' +
+      '            Back\n' +
+      '          </Link>\n' +
+      '        </CardContent>\n' +
+      '      </Card>\n' +
+      '    );\n' +
+      '\n' +
+      '  return (\n' +
+      '    <div className="space-y-4">\n' +
+      '      <div className="flex items-center gap-2">\n' +
+      '        <Button asChild variant="ghost" size="sm">\n' +
+      '          <Link to="/admin/classes">\n' +
+      '            <ArrowLeft className="size-4" />\n' +
+      '          </Link>\n' +
+      '        </Button>\n' +
+      '        <h1 className="text-2xl font-bold">{classInfo.class_name}</h1>\n' +
+      '      </div>\n' +
+      '\n' +
+      '      <Card>\n' +
+      '        <CardHeader>\n' +
+      '          <CardTitle className="text-base">Class settings</CardTitle>\n' +
+      '        </CardHeader>\n' +
+      '        <CardContent className="space-y-3">\n' +
+      '          <div>\n' +
+      '            <Label>Teacher</Label>\n' +
+      '            <Select\n' +
+      '              value={classInfo.teacher_id ?? "none"}\n' +
+      '              onValueChange={(v) => {\n' +
+      '                updateClass.mutate(\n' +
+      '                  {\n' +
+      '                    id: classInfo.id,\n' +
+      '                    teacher_id: v === "none" ? null : v,\n' +
+      '                  },\n' +
+      '                  {\n' +
+      '                    onSuccess: () => toast.success("Teacher updated"),\n' +
+      '                    onError: (e) =>\n' +
+      '                      toast.error(e instanceof Error ? e.message : "Failed"),\n' +
+      '                  }\n' +
+      '                );\n' +
+      '              }}\n' +
+      '            >\n' +
+      '              <SelectTrigger>\n' +
+      '                <SelectValue placeholder="Select teacher" />\n' +
+      '              </SelectTrigger>\n' +
+      '              <SelectContent>\n' +
+      '                <SelectItem value="none">— No teacher —</SelectItem>\n' +
+      '                {staff?.map((s) => (\n' +
+      '                  <SelectItem key={s.id} value={s.id}>\n' +
+      '                    {s.full_name}\n' +
+      '                  </SelectItem>\n' +
+      '                ))}\n' +
+      '              </SelectContent>\n' +
+      '            </Select>\n' +
+      '          </div>\n' +
+      '          <div>\n' +
+      '            <Label>Batch / Session</Label>\n' +
+      '            <Input\n' +
+      '              placeholder="e.g. 4:30 - 5:30"\n' +
+      '              defaultValue={classInfo.batch ?? ""}\n' +
+      '              onBlur={(e) => {\n' +
+      '                if (e.target.value !== (classInfo.batch ?? "")) {\n' +
+      '                  updateClass.mutate(\n' +
+      '                    { id: classInfo.id, batch: e.target.value },\n' +
+      '                    {\n' +
+      '                      onSuccess: () => toast.success("Batch updated"),\n' +
+      '                      onError: (e) =>\n' +
+      '                        toast.error(e instanceof Error ? e.message : "Failed"),\n' +
+      '                    }\n' +
+      '                  );\n' +
+      '                }\n' +
+      '              }}\n' +
+      '            />\n' +
+      '            <p className="text-[10px] text-muted-foreground mt-1">\n' +
+      '              Specify the time or batch name. Teachers assigned to this class\n' +
+      '              will see it in their dashboard.\n' +
+      '            </p>\n' +
+      '          </div>\n' +
+      '        </CardContent>\n' +
+      '      </Card>\n' +
+      '\n' +
+      '      <Card>\n' +
+      '        <CardHeader className="pb-3">\n' +
+      '          <CardTitle className="text-base flex flex-col sm:flex-row sm:items-center justify-between gap-3">\n' +
+      '            <div className="flex items-center gap-2">\n' +
+      '              <span>Roster</span>\n' +
+      '              <Badge variant="secondary" className="ml-1 text-[10px]">{totalCount}</Badge>\n' +
+      '            </div>\n' +
+      '            \n' +
+      '            <div className="flex flex-1 items-center gap-2 max-w-sm">\n' +
+      '              <div className="relative flex-1">\n' +
+      '                <Search className="absolute left-2 top-2.5 size-3.5 text-muted-foreground" />\n' +
+      '                <Input\n' +
+      '                  placeholder="Search name or ID..."\n' +
+      '                  className="pl-8 h-8 text-xs"\n' +
+      '                  value={search}\n' +
+      '                  onChange={(e) => setSearch(e.target.value)}\n' +
+      '                />\n' +
+      '              </div>\n' +
+      '              \n' +
+      '              <div className="flex gap-2">\n' +
+      '                <input\n' +
+      '                  ref={fileRef}\n' +
+      '                  type="file"\n' +
+      '                  accept=".csv,text/csv"\n' +
+      '                  hidden\n' +
+      '                  onChange={onFile}\n' +
+      '                />\n' +
+      '                <Button\n' +
+      '                  variant="outline"\n' +
+      '                  size="icon"\n' +
+      '                  className="size-8"\n' +
+      '                  onClick={() => fileRef.current?.click()}\n' +
+      '                  disabled={importMut.isPending}\n' +
+      '                  title="Import CSV"\n' +
+      '                >\n' +
+      '                  <Upload className="size-4" />\n' +
+      '                </Button>\n' +
+      '                <Dialog open={addOpen} onOpenChange={setAddOpen}>\n' +
+      '                  <DialogTrigger asChild>\n' +
+      '                    <Button size="icon" className="size-8" title="Add Student">\n' +
+      '                      <UserPlus className="size-4" />\n' +
+      '                    </Button>\n' +
+      '                  </DialogTrigger>\n' +
+      '                <DialogContent className="max-w-sm">\n' +
+      '                  <DialogHeader>\n' +
+      '                    <DialogTitle>Add student</DialogTitle>\n' +
+      '                  </DialogHeader>\n' +
+      '                  <div className="space-y-2">\n' +
+      '                    <div>\n' +
+      '                      <Label>Reg No</Label>\n' +
+      '                      <Input\n' +
+      '                        value={form.reg_no}\n' +
+      '                        onChange={(e) =>\n' +
+      '                          setForm({ ...form, reg_no: e.target.value })\n' +
+      '                        }\n' +
+      '                      />\n' +
+      '                    </div>\n' +
+      '                    <div>\n' +
+      '                      <Label>Name</Label>\n' +
+      '                      <Input\n' +
+      '                        value={form.name}\n' +
+      '                        onChange={(e) =>\n' +
+      '                          setForm({ ...form, name: e.target.value })\n' +
+      '                        }\n' +
+      '                      />\n' +
+      '                    </div>\n' +
+      '                    <div>\n' +
+      '                      <Label>Father name</Label>\n' +
+      '                      <Input\n' +
+      '                        value={form.father_name}\n' +
+      '                        onChange={(e) =>\n' +
+      '                          setForm({ ...form, father_name: e.target.value })\n' +
+      '           '... 4236 more characters,
+   runnerError: Error: RunnerError
+        at reviveInvokeError (file:///media/alpha/New%20Volume/Downloads/ledger%20fix/attendance-main%20(copy)/node_modules/vite/dist/node/module-runner.js:476:64)
+        at Object.invoke (file:///media/alpha/New%20Volume/Downloads/ledger%20fix/attendance-main%20(copy)/node_modules/vite/dist/node/module-runner.js:549:11)
+        at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+        at async ModuleRunner.getModuleInformation (file:///media/alpha/New%20Volume/Downloads/ledger%20fix/attendance-main%20(copy)/node_modules/vite/dist/node/module-runner.js:1086:7)
+        at async request (file:///media/alpha/New%20Volume/Downloads/ledger%20fix/attendance-main%20(copy)/node_modules/vite/dist/node/module-runner.js:1103:83)
+        at async eval (eval at runInlinedModule (file:///media/alpha/New%20Volume/Downloads/ledger%20fix/attendance-main%20(copy)/node_modules/vite/dist/node/module-runner.js:913:9), <anonymous>:16:32)
+        at async ESModulesEvaluator.runInlinedModule (file:///media/alpha/New%20Volume/Downloads/ledger%20fix/attendance-main%20(copy)/node_modules/vite/dist/node/module-runner.js:913:3)
+        at async ModuleRunner.directRequest (file:///media/alpha/New%20Volume/Downloads/ledger%20fix/attendance-main%20(copy)/node_modules/vite/dist/node/module-runner.js:1146:59)
+        at async ModuleRunner.cachedRequest (file:///media/alpha/New%20Volume/Downloads/ledger%20fix/attendance-main%20(copy)/node_modules/vite/dist/node/module-runner.js:1053:73)
+        at async eval (eval at runInlinedModule (file:///media/alpha/New%20Volume/Downloads/ledger%20fix/attendance-main%20(copy)/node_modules/vite/dist/node/module-runner.js:913:9), <anonymous>:6:31)
+  },
+  status: 500,
+  statusText: undefined,
+  headers: undefined,
+  data: undefined,
+  body: undefined,
+  unhandled: true
+}
+Error: h3 swallowed SSR error: {"status":500,"unhandled":true,"message":"HTTPError"}
+    at normalizeCatastrophicSsrResponse (eval at runInlinedModule (file:///media/alpha/New%20Volume/Downloads/ledger%20fix/attendance-main%20(copy)/node_modules/vite/dist/node/module-runner.js:913:9), <anonymous>:51:73)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async Object.fetch (eval at runInlinedModule (file:///media/alpha/New%20Volume/Downloads/ledger%20fix/attendance-main%20(copy)/node_modules/vite/dist/node/module-runner.js:913:9), <anonymous>:70:14)
+    at async file:///media/alpha/New%20Volume/Downloads/ledger%20fix/attendance-main%20(copy)/node_modules/@tanstack/start-plugin-core/dist/esm/vite/dev-server-plugin/plugin.js:71:36
+Error: Transform failed with 6 errors:
+/media/alpha/New Volume/Downloads/ledger fix/attendance-main (copy)/src/routes/_authenticated/admin.classes.$classId.tsx:318:12: ERROR: Unexpected closing "CardTitle" tag does not match opening "div" tag
+/media/alpha/New Volume/Downloads/ledger fix/attendance-main (copy)/src/routes/_authenticated/admin.classes.$classId.tsx:319:10: ERROR: Unexpected closing "CardHeader" tag does not match opening "CardTitle" tag
+/media/alpha/New Volume/Downloads/ledger fix/attendance-main (copy)/src/routes/_authenticated/admin.classes.$classId.tsx:396:8: ERROR: Unexpected closing "Card" tag does not match opening "CardHeader" tag
+/media/alpha/New Volume/Downloads/ledger fix/attendance-main (copy)/src/routes/_authenticated/admin.classes.$classId.tsx:397:6: ERROR: Unexpected closing "div" tag does not match opening "Card" tag
+/media/alpha/New Volume/Downloads/ledger fix/attendance-main (copy)/src/routes/_authenticated/admin.classes.$classId.tsx:399:0: ERROR: The character "}" is not valid inside a JSX element
+...
+    at failureErrorWithLog (/media/alpha/New Volume/Downloads/ledger fix/attendance-main (copy)/node_modules/vite/node_modules/esbuild/lib/main.js:1748:15)
+    ... 8 lines matching cause stack trace ...
+    at Pipe.onStreamRead (node:internal/stream_base_commons:189:23) {
+  cause: Error: Transform failed with 6 errors:
+  /media/alpha/New Volume/Downloads/ledger fix/attendance-main (copy)/src/routes/_authenticated/admin.classes.$classId.tsx:318:12: ERROR: Unexpected closing "CardTitle" tag does not match opening "div" tag
+  /media/alpha/New Volume/Downloads/ledger fix/attendance-main (copy)/src/routes/_authenticated/admin.classes.$classId.tsx:319:10: ERROR: Unexpected closing "CardHeader" tag does not match opening "CardTitle" tag
+  /media/alpha/New Volume/Downloads/ledger fix/attendance-main (copy)/src/routes/_authenticated/admin.classes.$classId.tsx:396:8: ERROR: Unexpected closing "Card" tag does not match opening "CardHeader" tag
+  /media/alpha/New Volume/Downloads/ledger fix/attendance-main (copy)/src/routes/_authenticated/admin.classes.$classId.tsx:397:6: ERROR: Unexpected closing "div" tag does not match opening "Card" tag
+  /media/alpha/New Volume/Downloads/ledger fix/attendance-main (copy)/src/routes/_authenticated/admin.classes.$classId.tsx:399:0: ERROR: The character "}" is not valid inside a JSX element
+  ...
+      at failureErrorWithLog (/media/alpha/New Volume/Downloads/ledger fix/attendance-main (copy)/node_modules/vite/node_modules/esbuild/lib/main.js:1748:15)
+      at /media/alpha/New Volume/Downloads/ledger fix/attendance-main (copy)/node_modules/vite/node_modules/esbuild/lib/main.js:1017:50
+      at responseCallbacks.<computed> (/media/alpha/New Volume/Downloads/ledger fix/attendance-main (copy)/node_modules/vite/node_modules/esbuild/lib/main.js:884:9)
+      at handleIncomingPacket (/media/alpha/New Volume/Downloads/ledger fix/attendance-main (copy)/node_modules/vite/node_modules/esbuild/lib/main.js:939:12)
+      at Socket.readFromStdout (/media/alpha/New Volume/Downloads/ledger fix/attendance-main (copy)/node_modules/vite/node_modules/esbuild/lib/main.js:862:7)
+      at Socket.emit (node:events:509:28)
+      at addChunk (node:internal/streams/readable:563:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:514:3)
+      at Readable.push (node:internal/streams/readable:394:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23) {
+    errors: [ [Object], [Object], [Object], [Object], [Object], [Object] ],
+    warnings: [],
+    frame: '\n' +
+      '\x1B[33mUnexpected closing "CardTitle" tag does not match opening "div" tag\x1B[39m\n' +
+      '316 |                </Dialog>\n' +
+      '317 |              </div>\n' +
+      '318 |            </CardTitle>\n' +
+      '    |              ^\n' +
+      '319 |          </CardHeader>\n' +
+      '320 |          <CardContent>\n' +
+      '\n' +
+      '\x1B[33mUnexpected closing "CardHeader" tag does not match opening "CardTitle" tag\x1B[39m\n' +
+      '317 |              </div>\n' +
+      '318 |            </CardTitle>\n' +
+      '319 |          </CardHeader>\n' +
+      '    |            ^\n' +
+      '320 |          <CardContent>\n' +
+      '321 |            <p className="text-xs text-muted-foreground mb-2">\n' +
+      '\n' +
+      '\x1B[33mUnexpected closing "Card" tag does not match opening "CardHeader" tag\x1B[39m\n' +
+      '394 |            </div>\n' +
+      '395 |          )}\n' +
+      '396 |        </Card>\n' +
+      '    |          ^\n' +
+      '397 |      </div>\n' +
+      '398 |    );\n' +
+      '\n' +
+      '\x1B[33mUnexpected closing "div" tag does not match opening "Card" tag\x1B[39m\n' +
+      '395 |          )}\n' +
+      '396 |        </Card>\n' +
+      '397 |      </div>\n' +
+      '    |        ^\n' +
+      '398 |    );\n' +
+      '399 |  }\n' +
+      '\n' +
+      '\x1B[33mThe character "}" is not valid inside a JSX element\x1B[39m\n' +
+      '397 |      </div>\n' +
+      '398 |    );\n' +
+      '399 |  }\n' +
+      '    |  ^\n' +
+      '400 |  \n' +
+      '\n' +
+      '\x1B[33mUnexpected end of file before a closing "div" tag\x1B[39m\n' +
+      '398 |    );\n' +
+      '399 |  }\n' +
+      '400 |  \n' +
+      '    |  ^\n',
+    loc: {
+      column: 12,
+      file: '/media/alpha/New Volume/Downloads/ledger fix/attendance-main (copy)/src/routes/_authenticated/admin.classes.$classId.tsx',
+      length: 9,
+      line: 318,
+      lineText: '          </CardTitle>',
+      namespace: '',
+      suggestion: 'div'
+    },
+    plugin: 'vite:esbuild',
+    id: '/media/alpha/New Volume/Downloads/ledger fix/attendance-main (copy)/src/routes/_authenticated/admin.classes.$classId.tsx',
+    pluginCode: 'import { createFileRoute, Link } from "@tanstack/react-router";\n' +
+      'import { useRef, useState, useEffect } from "react";\n' +
+      'import Papa from "papaparse";\n' +
+      'import {\n' +
+      '  useClassDetail,\n' +
+      '  useUpdateClass,\n' +
+      '  useStaffList,\n' +
+      '  useBulkImportStudents,\n' +
+      '  useAddStudent,\n' +
+      '  useDeleteStudent,\n' +
+      '  usePaginatedStudents,\n' +
+      '} from "@/hooks/useAdminData";\n' +
+      'import {\n' +
+      '  bulkStudentImportSchema,\n' +
+      '  studentFormSchema,\n' +
+      '} from "@/lib/schemas";\n' +
+      'import { APP_CONFIG } from "@/lib/config";\n' +
+      'import { Button } from "@/components/ui/button";\n' +
+      'import { Input } from "@/components/ui/input";\n' +
+      'import { Label } from "@/components/ui/label";\n' +
+      'import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";\n' +
+      'import {\n' +
+      '  Select,\n' +
+      '  SelectContent,\n' +
+      '  SelectItem,\n' +
+      '  SelectTrigger,\n' +
+      '  SelectValue,\n' +
+      '} from "@/components/ui/select";\n' +
+      'import {\n' +
+      '  Dialog,\n' +
+      '  DialogContent,\n' +
+      '  DialogFooter,\n' +
+      '  DialogHeader,\n' +
+      '  DialogTitle,\n' +
+      '  DialogTrigger,\n' +
+      '} from "@/components/ui/dialog";\n' +
+      'import { ArrowLeft, Upload, UserPlus, Trash2, Search, ChevronLeft, ChevronRight, FileText } from "lucide-react";\n' +
+      'import { toast } from "sonner";\n' +
+      '\n' +
+      'export const Route = createFileRoute(\n' +
+      '  "/_authenticated/admin/classes/$classId"\n' +
+      ')({\n' +
+      '  component: ClassDetailPage,\n' +
+      '});\n' +
+      '\n' +
+      'function ClassDetailPage() {\n' +
+      '  const { classId } = Route.useParams();\n' +
+      '  const { data: classInfo, isLoading } = useClassDetail(classId);\n' +
+      '  const { data: staff } = useStaffList();\n' +
+      '  \n' +
+      '  const [page, setPage] = useState(0);\n' +
+      '  const [search, setSearch] = useState("");\n' +
+      '  const [debouncedSearch, setDebouncedSearch] = useState("");\n' +
+      '\n' +
+      '  useEffect(() => {\n' +
+      '    const timer = setTimeout(() => {\n' +
+      '      setDebouncedSearch(search);\n' +
+      '      setPage(0); // Reset on search\n' +
+      '    }, 500);\n' +
+      '    return () => clearTimeout(timer);\n' +
+      '  }, [search]);\n' +
+      '\n' +
+      '  const { data: rosterData, isLoading: rosterLoading } = usePaginatedStudents(classId, page, debouncedSearch);\n' +
+      '  const roster = rosterData?.data ?? [];\n' +
+      '  const totalCount = rosterData?.count ?? 0;\n' +
+      '  const totalPages = Math.ceil(totalCount / APP_CONFIG.pageSize);\n' +
+      '\n' +
+      '  const updateClass = useUpdateClass();\n' +
+      '  const importMut = useBulkImportStudents(classId);\n' +
+      '  const addOne = useAddStudent(classId);\n' +
+      '  const deleteOne = useDeleteStudent(classId);\n' +
+      '  const fileRef = useRef<HTMLInputElement>(null);\n' +
+      '  const [addOpen, setAddOpen] = useState(false);\n' +
+      '  const [form, setForm] = useState({ reg_no: "", name: "", father_name: "" });\n' +
+      '\n' +
+      '  const onFile = (e: React.ChangeEvent<HTMLInputElement>) => {\n' +
+      '    const file = e.target.files?.[0];\n' +
+      '    if (!file) return;\n' +
+      '    Papa.parse(file, {\n' +
+      '      header: true,\n' +
+      '      skipEmptyLines: true,\n' +
+      '      complete: (res) => {\n' +
+      '        try {\n' +
+      '          // Normalize and map keys to schema expected fields\n' +
+      '          const normalized = (res.data as any[]).map((row) => {\n' +
+      '            const obj: any = {};\n' +
+      '            for (const key in row) {\n' +
+      '              const k = key.toLowerCase().trim();\n' +
+      '              let target = k.replace(/[\\s-]+/g, "_");\n' +
+      '              \n' +
+      '              // Map common synonyms\n' +
+      '              if (k.includes("reg") || k.includes("id") || k.includes("number")) target = "reg_no";\n' +
+      '              if (k.includes("student") || k.includes("full name")) target = "name";\n' +
+      '              if (k.includes("father") || k.includes("parent")) target = "father_name";\n' +
+      '              \n' +
+      '              obj[target] = row[key];\n' +
+      '            }\n' +
+      '            return obj;\n' +
+      '          });\n' +
+      '\n' +
+      '          const parsed = bulkStudentImportSchema.safeParse(normalized);\n' +
+      '          if (!parsed.success) {\n' +
+      '            const issues = parsed.error.issues.map(i => `${i.path.join(\'.\')}: ${i.message}`).join(", ");\n' +
+      '            toast.error(`CSV Validation Error: ${issues.slice(0, 100)}...`);\n' +
+      '            return;\n' +
+      '          }\n' +
+      '\n' +
+      '          importMut.mutate(parsed.data, {\n' +
+      '            onSuccess: (d) =>\n' +
+      '              toast.success(`Imported ${d?.length ?? 0} students`),\n' +
+      '            onError: (err) =>\n' +
+      '              toast.error(err instanceof Error ? err.message : "Import failed"),\n' +
+      '          });\n' +
+      '        } catch (err: unknown) {\n' +
+      '          toast.error("An unexpected error occurred during import");\n' +
+      '          console.error(err);\n' +
+      '        } finally {\n' +
+      '          if (fileRef.current) fileRef.current.value = "";\n' +
+      '        }\n' +
+      '      },\n' +
+      '      error: (err) => toast.error(err.message),\n' +
+      '    });\n' +
+      '  };\n' +
+      '\n' +
+      '  if (isLoading) return <p className="text-sm text-muted-foreground">Loading…</p>;\n' +
+      '  if (!classInfo)\n' +
+      '    return (\n' +
+      '      <Card>\n' +
+      '        <CardContent className="p-6 text-center">\n' +
+      '          Class not found.{" "}\n' +
+      '          <Link to="/admin/classes" className="underline">\n' +
+      '            Back\n' +
+      '          </Link>\n' +
+      '        </CardContent>\n' +
+      '      </Card>\n' +
+      '    );\n' +
+      '\n' +
+      '  return (\n' +
+      '    <div className="space-y-4">\n' +
+      '      <div className="flex items-center gap-2">\n' +
+      '        <Button asChild variant="ghost" size="sm">\n' +
+      '          <Link to="/admin/classes">\n' +
+      '            <ArrowLeft className="size-4" />\n' +
+      '          </Link>\n' +
+      '        </Button>\n' +
+      '        <h1 className="text-2xl font-bold">{classInfo.class_name}</h1>\n' +
+      '      </div>\n' +
+      '\n' +
+      '      <Card>\n' +
+      '        <CardHeader>\n' +
+      '          <CardTitle className="text-base">Class settings</CardTitle>\n' +
+      '        </CardHeader>\n' +
+      '        <CardContent className="space-y-3">\n' +
+      '          <div>\n' +
+      '            <Label>Teacher</Label>\n' +
+      '            <Select\n' +
+      '              value={classInfo.teacher_id ?? "none"}\n' +
+      '              onValueChange={(v) => {\n' +
+      '                updateClass.mutate(\n' +
+      '                  {\n' +
+      '                    id: classInfo.id,\n' +
+      '                    teacher_id: v === "none" ? null : v,\n' +
+      '                  },\n' +
+      '                  {\n' +
+      '                    onSuccess: () => toast.success("Teacher updated"),\n' +
+      '                    onError: (e) =>\n' +
+      '                      toast.error(e instanceof Error ? e.message : "Failed"),\n' +
+      '                  }\n' +
+      '                );\n' +
+      '              }}\n' +
+      '            >\n' +
+      '              <SelectTrigger>\n' +
+      '                <SelectValue placeholder="Select teacher" />\n' +
+      '              </SelectTrigger>\n' +
+      '              <SelectContent>\n' +
+      '                <SelectItem value="none">— No teacher —</SelectItem>\n' +
+      '                {staff?.map((s) => (\n' +
+      '                  <SelectItem key={s.id} value={s.id}>\n' +
+      '                    {s.full_name}\n' +
+      '                  </SelectItem>\n' +
+      '                ))}\n' +
+      '              </SelectContent>\n' +
+      '            </Select>\n' +
+      '          </div>\n' +
+      '          <div>\n' +
+      '            <Label>Batch / Session</Label>\n' +
+      '            <Input\n' +
+      '              placeholder="e.g. 4:30 - 5:30"\n' +
+      '              defaultValue={classInfo.batch ?? ""}\n' +
+      '              onBlur={(e) => {\n' +
+      '                if (e.target.value !== (classInfo.batch ?? "")) {\n' +
+      '                  updateClass.mutate(\n' +
+      '                    { id: classInfo.id, batch: e.target.value },\n' +
+      '                    {\n' +
+      '                      onSuccess: () => toast.success("Batch updated"),\n' +
+      '                      onError: (e) =>\n' +
+      '                        toast.error(e instanceof Error ? e.message : "Failed"),\n' +
+      '                    }\n' +
+      '                  );\n' +
+      '                }\n' +
+      '              }}\n' +
+      '            />\n' +
+      '            <p className="text-[10px] text-muted-foreground mt-1">\n' +
+      '              Specify the time or batch name. Teachers assigned to this class\n' +
+      '              will see it in their dashboard.\n' +
+      '            </p>\n' +
+      '          </div>\n' +
+      '        </CardContent>\n' +
+      '      </Card>\n' +
+      '\n' +
+      '      <Card>\n' +
+      '        <CardHeader className="pb-3">\n' +
+      '          <CardTitle className="text-base flex flex-col sm:flex-row sm:items-center justify-between gap-3">\n' +
+      '            <div className="flex items-center gap-2">\n' +
+      '              <span>Roster</span>\n' +
+      '              <Badge variant="secondary" className="ml-1 text-[10px]">{totalCount}</Badge>\n' +
+      '            </div>\n' +
+      '            \n' +
+      '            <div className="flex flex-1 items-center gap-2 max-w-sm">\n' +
+      '              <div className="relative flex-1">\n' +
+      '                <Search className="absolute left-2 top-2.5 size-3.5 text-muted-foreground" />\n' +
+      '                <Input\n' +
+      '                  placeholder="Search name or ID..."\n' +
+      '                  className="pl-8 h-8 text-xs"\n' +
+      '                  value={search}\n' +
+      '                  onChange={(e) => setSearch(e.target.value)}\n' +
+      '                />\n' +
+      '              </div>\n' +
+      '              \n' +
+      '              <div className="flex gap-2">\n' +
+      '                <input\n' +
+      '                  ref={fileRef}\n' +
+      '                  type="file"\n' +
+      '                  accept=".csv,text/csv"\n' +
+      '                  hidden\n' +
+      '                  onChange={onFile}\n' +
+      '                />\n' +
+      '                <Button\n' +
+      '                  variant="outline"\n' +
+      '                  size="icon"\n' +
+      '                  className="size-8"\n' +
+      '                  onClick={() => fileRef.current?.click()}\n' +
+      '                  disabled={importMut.isPending}\n' +
+      '                  title="Import CSV"\n' +
+      '                >\n' +
+      '                  <Upload className="size-4" />\n' +
+      '                </Button>\n' +
+      '                <Dialog open={addOpen} onOpenChange={setAddOpen}>\n' +
+      '                  <DialogTrigger asChild>\n' +
+      '                    <Button size="icon" className="size-8" title="Add Student">\n' +
+      '                      <UserPlus className="size-4" />\n' +
+      '                    </Button>\n' +
+      '                  </DialogTrigger>\n' +
+      '                <DialogContent className="max-w-sm">\n' +
+      '                  <DialogHeader>\n' +
+      '                    <DialogTitle>Add student</DialogTitle>\n' +
+      '                  </DialogHeader>\n' +
+      '                  <div className="space-y-2">\n' +
+      '                    <div>\n' +
+      '                      <Label>Reg No</Label>\n' +
+      '                      <Input\n' +
+      '                        value={form.reg_no}\n' +
+      '                        onChange={(e) =>\n' +
+      '                          setForm({ ...form, reg_no: e.target.value })\n' +
+      '                        }\n' +
+      '                      />\n' +
+      '                    </div>\n' +
+      '                    <div>\n' +
+      '                      <Label>Name</Label>\n' +
+      '                      <Input\n' +
+      '                        value={form.name}\n' +
+      '                        onChange={(e) =>\n' +
+      '                          setForm({ ...form, name: e.target.value })\n' +
+      '                        }\n' +
+      '                      />\n' +
+      '                    </div>\n' +
+      '                    <div>\n' +
+      '                      <Label>Father name</Label>\n' +
+      '                      <Input\n' +
+      '                        value={form.father_name}\n' +
+      '                        onChange={(e) =>\n' +
+      '                          setForm({ ...form, father_name: e.target.value })\n' +
+      '           '... 4236 more characters,
+    runnerError: Error: RunnerError
+        at reviveInvokeError (file:///media/alpha/New%20Volume/Downloads/ledger%20fix/attendance-main%20(copy)/node_modules/vite/dist/node/module-runner.js:476:64)
+        at Object.invoke (file:///media/alpha/New%20Volume/Downloads/ledger%20fix/attendance-main%20(copy)/node_modules/vite/dist/node/module-runner.js:549:11)
+        at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+        at async ModuleRunner.getModuleInformation (file:///media/alpha/New%20Volume/Downloads/ledger%20fix/attendance-main%20(copy)/node_modules/vite/dist/node/module-runner.js:1086:7)
+        at async request (file:///media/alpha/New%20Volume/Downloads/ledger%20fix/attendance-main%20(copy)/node_modules/vite/dist/node/module-runner.js:1103:83)
+        at async eval (eval at runInlinedModule (file:///media/alpha/New%20Volume/Downloads/ledger%20fix/attendance-main%20(copy)/node_modules/vite/dist/node/module-runner.js:913:9), <anonymous>:16:32)
+        at async ESModulesEvaluator.runInlinedModule (file:///media/alpha/New%20Volume/Downloads/ledger%20fix/attendance-main%20(copy)/node_modules/vite/dist/node/module-runner.js:913:3)
+        at async ModuleRunner.directRequest (file:///media/alpha/New%20Volume/Downloads/ledger%20fix/attendance-main%20(copy)/node_modules/vite/dist/node/module-runner.js:1146:59)
+        at async ModuleRunner.cachedRequest (file:///media/alpha/New%20Volume/Downloads/ledger%20fix/attendance-main%20(copy)/node_modules/vite/dist/node/module-runner.js:1053:73)
+        at async eval (eval at runInlinedModule (file:///media/alpha/New%20Volume/Downloads/ledger%20fix/attendance-main%20(copy)/node_modules/vite/dist/node/module-runner.js:913:9), <anonymous>:6:31)
+  },
+  status: 500,
+  statusText: undefined,
+  headers: undefined,
+  data: undefined,
+  body: undefined,
+  unhandled: true
+}
+Error: h3 swallowed SSR error: {"status":500,"unhandled":true,"message":"HTTPError"}
+    at normalizeCatastrophicSsrResponse (eval at runInlinedModule (file:///media/alpha/New%20Volume/Downloads/ledger%20fix/attendance-main%20(copy)/node_modules/vite/dist/node/module-runner.js:913:9), <anonymous>:51:73)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async Object.fetch (eval at runInlinedModule (file:///media/alpha/New%20Volume/Downloads/ledger%20fix/attendance-main%20(copy)/node_modules/vite/dist/node/module-runner.js:913:9), <anonymous>:70:14)
+    at async file:///media/alpha/New%20Volume/Downloads/ledger%20fix/attendance-main%20(copy)/node_modules/@tanstack/start-plugin-core/dist/esm/vite/dev-server-plugin/plugin.js:71:36
+Error: Transform failed with 6 errors:
+/media/alpha/New Volume/Downloads/ledger fix/attendance-main (copy)/src/routes/_authenticated/admin.classes.$classId.tsx:318:12: ERROR: Unexpected closing "CardTitle" tag does not match opening "div" tag
+/media/alpha/New Volume/Downloads/ledger fix/attendance-main (copy)/src/routes/_authenticated/admin.classes.$classId.tsx:319:10: ERROR: Unexpected closing "CardHeader" tag does not match opening "CardTitle" tag
+/media/alpha/New Volume/Downloads/ledger fix/attendance-main (copy)/src/routes/_authenticated/admin.classes.$classId.tsx:396:8: ERROR: Unexpected closing "Card" tag does not match opening "CardHeader" tag
+/media/alpha/New Volume/Downloads/ledger fix/attendance-main (copy)/src/routes/_authenticated/admin.classes.$classId.tsx:397:6: ERROR: Unexpected closing "div" tag does not match opening "Card" tag
+/media/alpha/New Volume/Downloads/ledger fix/attendance-main (copy)/src/routes/_authenticated/admin.classes.$classId.tsx:399:0: ERROR: The character "}" is not valid inside a JSX element
+...
+    at failureErrorWithLog (/media/alpha/New Volume/Downloads/ledger fix/attendance-main (copy)/node_modules/vite/node_modules/esbuild/lib/main.js:1748:15)
+    ... 8 lines matching cause stack trace ...
+    at Pipe.onStreamRead (node:internal/stream_base_commons:189:23) {
+  cause: Error: Transform failed with 6 errors:
+  /media/alpha/New Volume/Downloads/ledger fix/attendance-main (copy)/src/routes/_authenticated/admin.classes.$classId.tsx:318:12: ERROR: Unexpected closing "CardTitle" tag does not match opening "div" tag
+  /media/alpha/New Volume/Downloads/ledger fix/attendance-main (copy)/src/routes/_authenticated/admin.classes.$classId.tsx:319:10: ERROR: Unexpected closing "CardHeader" tag does not match opening "CardTitle" tag
+  /media/alpha/New Volume/Downloads/ledger fix/attendance-main (copy)/src/routes/_authenticated/admin.classes.$classId.tsx:396:8: ERROR: Unexpected closing "Card" tag does not match opening "CardHeader" tag
+  /media/alpha/New Volume/Downloads/ledger fix/attendance-main (copy)/src/routes/_authenticated/admin.classes.$classId.tsx:397:6: ERROR: Unexpected closing "div" tag does not match opening "Card" tag
+  /media/alpha/New Volume/Downloads/ledger fix/attendance-main (copy)/src/routes/_authenticated/admin.classes.$classId.tsx:399:0: ERROR: The character "}" is not valid inside a JSX element
+  ...
+      at failureErrorWithLog (/media/alpha/New Volume/Downloads/ledger fix/attendance-main (copy)/node_modules/vite/node_modules/esbuild/lib/main.js:1748:15)
+      at /media/alpha/New Volume/Downloads/ledger fix/attendance-main (copy)/node_modules/vite/node_modules/esbuild/lib/main.js:1017:50
+      at responseCallbacks.<computed> (/media/alpha/New Volume/Downloads/ledger fix/attendance-main (copy)/node_modules/vite/node_modules/esbuild/lib/main.js:884:9)
+      at handleIncomingPacket (/media/alpha/New Volume/Downloads/ledger fix/attendance-main (copy)/node_modules/vite/node_modules/esbuild/lib/main.js:939:12)
+      at Socket.readFromStdout (/media/alpha/New Volume/Downloads/ledger fix/attendance-main (copy)/node_modules/vite/node_modules/esbuild/lib/main.js:862:7)
+      at Socket.emit (node:events:509:28)
+      at addChunk (node:internal/streams/readable:563:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:514:3)
+      at Readable.push (node:internal/streams/readable:394:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23) {
+    errors: [ [Object], [Object], [Object], [Object], [Object], [Object] ],
+    warnings: [],
+    frame: '\n' +
+      '\x1B[33mUnexpected closing "CardTitle" tag does not match opening "div" tag\x1B[39m\n' +
+      '316 |                </Dialog>\n' +
+      '317 |              </div>\n' +
+      '318 |            </CardTitle>\n' +
+      '    |              ^\n' +
+      '319 |          </CardHeader>\n' +
+      '320 |          <CardContent>\n' +
+      '\n' +
+      '\x1B[33mUnexpected closing "CardHeader" tag does not match opening "CardTitle" tag\x1B[39m\n' +
+      '317 |              </div>\n' +
+      '318 |            </CardTitle>\n' +
+      '319 |          </CardHeader>\n' +
+      '    |            ^\n' +
+      '320 |          <CardContent>\n' +
+      '321 |            <p className="text-xs text-muted-foreground mb-2">\n' +
+      '\n' +
+      '\x1B[33mUnexpected closing "Card" tag does not match opening "CardHeader" tag\x1B[39m\n' +
+      '394 |            </div>\n' +
+      '395 |          )}\n' +
+      '396 |        </Card>\n' +
+      '    |          ^\n' +
+      '397 |      </div>\n' +
+      '398 |    );\n' +
+      '\n' +
+      '\x1B[33mUnexpected closing "div" tag does not match opening "Card" tag\x1B[39m\n' +
+      '395 |          )}\n' +
+      '396 |        </Card>\n' +
+      '397 |      </div>\n' +
+      '    |        ^\n' +
+      '398 |    );\n' +
+      '399 |  }\n' +
+      '\n' +
+      '\x1B[33mThe character "}" is not valid inside a JSX element\x1B[39m\n' +
+      '397 |      </div>\n' +
+      '398 |    );\n' +
+      '399 |  }\n' +
+      '    |  ^\n' +
+      '400 |  \n' +
+      '\n' +
+      '\x1B[33mUnexpected end of file before a closing "div" tag\x1B[39m\n' +
+      '398 |    );\n' +
+      '399 |  }\n' +
+      '400 |  \n' +
+      '    |  ^\n',
+    loc: {
+      column: 12,
+      file: '/media/alpha/New Volume/Downloads/ledger fix/attendance-main (copy)/src/routes/_authenticated/admin.classes.$classId.tsx',
+      length: 9,
+      line: 318,
+      lineText: '          </CardTitle>',
+      namespace: '',
+      suggestion: 'div'
+    },
+    plugin: 'vite:esbuild',
+    id: '/media/alpha/New Volume/Downloads/ledger fix/attendance-main (copy)/src/routes/_authenticated/admin.classes.$classId.tsx',
+    pluginCode: 'import { createFileRoute, Link } from "@tanstack/react-router";\n' +
+      'import { useRef, useState, useEffect } from "react";\n' +
+      'import Papa from "papaparse";\n' +
+      'import {\n' +
+      '  useClassDetail,\n' +
+      '  useUpdateClass,\n' +
+      '  useStaffList,\n' +
+      '  useBulkImportStudents,\n' +
+      '  useAddStudent,\n' +
+      '  useDeleteStudent,\n' +
+      '  usePaginatedStudents,\n' +
+      '} from "@/hooks/useAdminData";\n' +
+      'import {\n' +
+      '  bulkStudentImportSchema,\n' +
+      '  studentFormSchema,\n' +
+      '} from "@/lib/schemas";\n' +
+      'import { APP_CONFIG } from "@/lib/config";\n' +
+      'import { Button } from "@/components/ui/button";\n' +
+      'import { Input } from "@/components/ui/input";\n' +
+      'import { Label } from "@/components/ui/label";\n' +
+      'import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";\n' +
+      'import {\n' +
+      '  Select,\n' +
+      '  SelectContent,\n' +
+      '  SelectItem,\n' +
+      '  SelectTrigger,\n' +
+      '  SelectValue,\n' +
+      '} from "@/components/ui/select";\n' +
+      'import {\n' +
+      '  Dialog,\n' +
+      '  DialogContent,\n' +
+      '  DialogFooter,\n' +
+      '  DialogHeader,\n' +
+      '  DialogTitle,\n' +
+      '  DialogTrigger,\n' +
+      '} from "@/components/ui/dialog";\n' +
+      'import { ArrowLeft, Upload, UserPlus, Trash2, Search, ChevronLeft, ChevronRight, FileText } from "lucide-react";\n' +
+      'import { toast } from "sonner";\n' +
+      '\n' +
+      'export const Route = createFileRoute(\n' +
+      '  "/_authenticated/admin/classes/$classId"\n' +
+      ')({\n' +
+      '  component: ClassDetailPage,\n' +
+      '});\n' +
+      '\n' +
+      'function ClassDetailPage() {\n' +
+      '  const { classId } = Route.useParams();\n' +
+      '  const { data: classInfo, isLoading } = useClassDetail(classId);\n' +
+      '  const { data: staff } = useStaffList();\n' +
+      '  \n' +
+      '  const [page, setPage] = useState(0);\n' +
+      '  const [search, setSearch] = useState("");\n' +
+      '  const [debouncedSearch, setDebouncedSearch] = useState("");\n' +
+      '\n' +
+      '  useEffect(() => {\n' +
+      '    const timer = setTimeout(() => {\n' +
+      '      setDebouncedSearch(search);\n' +
+      '      setPage(0); // Reset on search\n' +
+      '    }, 500);\n' +
+      '    return () => clearTimeout(timer);\n' +
+      '  }, [search]);\n' +
+      '\n' +
+      '  const { data: rosterData, isLoading: rosterLoading } = usePaginatedStudents(classId, page, debouncedSearch);\n' +
+      '  const roster = rosterData?.data ?? [];\n' +
+      '  const totalCount = rosterData?.count ?? 0;\n' +
+      '  const totalPages = Math.ceil(totalCount / APP_CONFIG.pageSize);\n' +
+      '\n' +
+      '  const updateClass = useUpdateClass();\n' +
+      '  const importMut = useBulkImportStudents(classId);\n' +
+      '  const addOne = useAddStudent(classId);\n' +
+      '  const deleteOne = useDeleteStudent(classId);\n' +
+      '  const fileRef = useRef<HTMLInputElement>(null);\n' +
+      '  const [addOpen, setAddOpen] = useState(false);\n' +
+      '  const [form, setForm] = useState({ reg_no: "", name: "", father_name: "" });\n' +
+      '\n' +
+      '  const onFile = (e: React.ChangeEvent<HTMLInputElement>) => {\n' +
+      '    const file = e.target.files?.[0];\n' +
+      '    if (!file) return;\n' +
+      '    Papa.parse(file, {\n' +
+      '      header: true,\n' +
+      '      skipEmptyLines: true,\n' +
+      '      complete: (res) => {\n' +
+      '        try {\n' +
+      '          // Normalize and map keys to schema expected fields\n' +
+      '          const normalized = (res.data as any[]).map((row) => {\n' +
+      '            const obj: any = {};\n' +
+      '            for (const key in row) {\n' +
+      '              const k = key.toLowerCase().trim();\n' +
+      '              let target = k.replace(/[\\s-]+/g, "_");\n' +
+      '              \n' +
+      '              // Map common synonyms\n' +
+      '              if (k.includes("reg") || k.includes("id") || k.includes("number")) target = "reg_no";\n' +
+      '              if (k.includes("student") || k.includes("full name")) target = "name";\n' +
+      '              if (k.includes("father") || k.includes("parent")) target = "father_name";\n' +
+      '              \n' +
+      '              obj[target] = row[key];\n' +
+      '            }\n' +
+      '            return obj;\n' +
+      '          });\n' +
+      '\n' +
+      '          const parsed = bulkStudentImportSchema.safeParse(normalized);\n' +
+      '          if (!parsed.success) {\n' +
+      '            const issues = parsed.error.issues.map(i => `${i.path.join(\'.\')}: ${i.message}`).join(", ");\n' +
+      '            toast.error(`CSV Validation Error: ${issues.slice(0, 100)}...`);\n' +
+      '            return;\n' +
+      '          }\n' +
+      '\n' +
+      '          importMut.mutate(parsed.data, {\n' +
+      '            onSuccess: (d) =>\n' +
+      '              toast.success(`Imported ${d?.length ?? 0} students`),\n' +
+      '            onError: (err) =>\n' +
+      '              toast.error(err instanceof Error ? err.message : "Import failed"),\n' +
+      '          });\n' +
+      '        } catch (err: unknown) {\n' +
+      '          toast.error("An unexpected error occurred during import");\n' +
+      '          console.error(err);\n' +
+      '        } finally {\n' +
+      '          if (fileRef.current) fileRef.current.value = "";\n' +
+      '        }\n' +
+      '      },\n' +
+      '      error: (err) => toast.error(err.message),\n' +
+      '    });\n' +
+      '  };\n' +
+      '\n' +
+      '  if (isLoading) return <p className="text-sm text-muted-foreground">Loading…</p>;\n' +
+      '  if (!classInfo)\n' +
+      '    return (\n' +
+      '      <Card>\n' +
+      '        <CardContent className="p-6 text-center">\n' +
+      '          Class not found.{" "}\n' +
+      '          <Link to="/admin/classes" className="underline">\n' +
+      '            Back\n' +
+      '          </Link>\n' +
+      '        </CardContent>\n' +
+      '      </Card>\n' +
+      '    );\n' +
+      '\n' +
+      '  return (\n' +
+      '    <div className="space-y-4">\n' +
+      '      <div className="flex items-center gap-2">\n' +
+      '        <Button asChild variant="ghost" size="sm">\n' +
+      '          <Link to="/admin/classes">\n' +
+      '            <ArrowLeft className="size-4" />\n' +
+      '          </Link>\n' +
+      '        </Button>\n' +
+      '        <h1 className="text-2xl font-bold">{classInfo.class_name}</h1>\n' +
+      '      </div>\n' +
+      '\n' +
+      '      <Card>\n' +
+      '        <CardHeader>\n' +
+more 100000000000000000000000+ lines run "npm run dev" and see the console,
+
